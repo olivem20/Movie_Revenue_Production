@@ -50,21 +50,6 @@ In our second model, we used an Artificial Neural Network. This model is more ap
 ### Model MSE
 ![model_mse](https://github.com/Sukhjit21/Movie-Revenue-Prediction/assets/85320290/a0d6cfc7-18e0-4aef-a795-0cff8c3a7ad3)
 
-## Discussion
-### Model 1
-Overall, the first model was extremely inaccurate, especially when dealing with data it had not been presented with before. Our testing MSE was several orders of magnitude higher than our training MSE. Normally, such a large gap between training and testing error would cause us to say our model is overfitted, however, due to the extremely high training error, we can conclude that our model significantly underfits the data and is not complex enough to satisfactorily explain the variance in our data set. This was not entirely unexpected, as our data has a large degree of variance, but we were curious to see how sufficiently a linear regression model would describe our dataset. We plan to further explore modeling the data using neural networks in order to find a more appropriately fitting model.
-
-### Model 2
-Our second model was also extremely inaccurate, albeit orders of magnitude less so than when we presented our first model with data it had not seen before. Our accuracy was extremely low (peaking around 0.5%) and our MSE was 977043185467392.00. Similarly to our first model, based on our huge MSE, we can conclude that our model still underfit the data and was not complex enough to satisfactorily explain the variance in our data set. However, we did see that using a neural network was significantly more effective than our initial linear regression model, especially when presented with data it had not seen before, as the testing MSE for the neural network was over 10^26 times smaller than the testing MSE for the linear regression model. 
-
-Despite our poor results, the results of both models are somewhat plausible: it’s almost impossible for a studio to guarantee that a movie will succeed. If a neural network was able to successfully predict the ingredients of a blockbuster, then there would be no need for writers, directors or producers. It’s difficult for any machine learning model to accurately replace human creativity, and perhaps harder still to accurately predict what will resonate with audiences, and we ran up against that roadblock when making our model.
-
-## Results
-
-#### Model 1
-For our first model, the training MSE was 675697998806435.38 and the testing MSE was 3768517409013513169214405319052180911554560.00.
-#### Model 2
-Our second model had a training MSE of 977043185467392.00 and the testing MSE was 6849642834690048.00.
 
 ## Conclusion
 Overall, the project proved to be tough for all six of us. At times we definitely struggled with building a functional model, but working hands on with no strict limits turned out to be a great learning experience. Our MSE for both models was significantly higher than we hoped, but was not entirely unexpected, given that the data didn’t show many strong correlations: building an enhanced model for our data might have taken more time then we had for this class and was possibly outside of the scope for what we learned. With hindsight, we realized that we should have tried to reduce our loss by using hyperparameter tuning. This would’ve given us the best possible parameters, while saving us time from the hours we all spent building and training different models with different parameters. Additionally, we potentially could have had better results if we had limited how many independent variables we were considering when it came to predicting the success of a movie: eliminating more columns during preprocessing and as a result building more streamlined models could have led to more accurate predictions.
